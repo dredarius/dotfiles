@@ -1,0 +1,137 @@
+* {
+    font-family: "Iosevka Nerd Font", "Iosevka Nerd Font Mono", monospace;
+    font-size: 13px;
+}
+
+/* Transparent bar background so islands float */
+window#waybar {
+    background: transparent;
+    color: #339933;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* === Island base style === */
+#launchers,
+#workspaces,
+#status {
+    background-color: rgba(0, 10, 0, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(51, 153, 51, 0.2);
+    margin: 3px 3px;
+    padding: 0 4px;
+}
+
+/* === Left launcher icons === */
+#custom-kitty,
+#custom-firefox,
+#custom-signal,
+#custom-discord,
+#custom-steam {
+    color: #339933;
+    padding: 0 7px;
+    font-size: 15px;
+}
+
+#custom-kitty {
+    padding-left: 8px;
+}
+
+#custom-steam {
+    padding-right: 8px;
+}
+
+#custom-kitty:hover,
+#custom-firefox:hover,
+#custom-signal:hover,
+#custom-discord:hover,
+#custom-steam:hover {
+    background-color: rgba(51, 153, 51, 0.1);
+    border-radius: 8px;
+}
+
+/* === Center workspaces === */
+#custom-ws {
+    color: #339933;
+    font-size: 14px;
+    padding: 0 8px;
+}
+
+/* === Right side modules === */
+#memory,
+#temperature,
+#disk,
+#custom-volume,
+#network,
+#clock,
+#custom-power {
+    padding: 0 8px;
+    color: #339933;
+}
+
+/* Memory - bright green */
+#memory {
+    color: #339933;
+}
+
+/* CPU temperature - dimmer green */
+#temperature {
+    color: #2d8a2d;
+}
+
+#temperature.critical {
+    color: #ff3333;
+}
+
+/* Disk */
+#disk {
+    color: #2b7a2b;
+}
+
+/* GPU temperature */
+#temperature-gpu {
+    color: #2d8a2d;
+}
+
+/* Volume bar */
+#custom-volume {
+    color: #339933;
+}
+
+/* Network */
+#network {
+    color: #339933;
+}
+
+#network.disconnected {
+    color: #ff3333;
+}
+
+/* Clock */
+#clock {
+    color: #339933;
+}
+
+/* Power menu */
+#custom-power {
+    color: #1a5c1a;
+    padding-right: 6px;
+}
+
+#custom-power:hover {
+    color: #339933;
+}
+
+/* Remove button styling artifacts */
+button {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+button:hover {
+    background: inherit;
+}

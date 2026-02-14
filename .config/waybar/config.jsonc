@@ -1,0 +1,141 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "spacing": 0,
+    "margin-top": 4,
+    "margin-left": 6,
+    "margin-right": 6,
+    "modules-left": [
+        "group/launchers"
+    ],
+//    "modules-center": [
+//        "group/workspaces"
+//    ],
+    "modules-right": [
+        "group/status"
+    ],
+    "group/launchers": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/kitty",
+            "custom/firefox",
+            "custom/signal",
+            "custom/discord",
+            "custom/steam"
+        ]
+    },
+    "custom/kitty": {
+        "format": "{}",
+        "exec": "printf '\\uf120'",
+        "interval": "once",
+        "tooltip": false,
+        "on-click": "kitty"
+    },
+    "custom/firefox": {
+        "format": "{}",
+        "exec": "printf '\\uf269'",
+        "interval": "once",
+        "tooltip": false,
+        "on-click": "firefox"
+    },
+    "custom/signal": {
+        "format": "{}",
+        "exec": "printf '\\uf086'",
+        "interval": "once",
+        "tooltip": false,
+        "on-click": "signal-desktop"
+    },
+    "custom/discord": {
+        "format": "{}",
+        "exec": "printf '\\U000f066f'",
+        "interval": "once",
+        "tooltip": false,
+        "on-click": "discord"
+    },
+    "custom/steam": {
+        "format": "{}",
+        "exec": "printf '\\uf1b6'",
+        "interval": "once",
+        "tooltip": false,
+        "on-click": "steam"
+    },
+//    "group/workspaces": {
+//        "orientation": "horizontal",
+//        "modules": [
+//            "custom/ws"
+//        ]
+//    },
+//    "custom/ws": {
+//        "exec": "~/.config/waybar/scripts/workspaces.sh",
+//        "interval": 1,
+//       "tooltip": false
+//    },
+    "group/status": {
+        "orientation": "horizontal",
+        "modules": [
+            "memory",
+            "temperature",
+            "disk",
+            "temperature#gpu",
+            "custom/volume",
+            "network",
+            "clock",
+            "custom/power"
+        ]
+    },
+    "memory": {
+        "format": "󰍛 {percentage}%",
+        "interval": 5,
+        "tooltip": true,
+        "tooltip-format": "RAM: {used:0.1f}GiB / {total:0.1f}GiB"
+    },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 80,
+        "format": "󰔏 {temperatureC}°C",
+        "format-critical": "󰸁 {temperatureC}°C",
+        "tooltip": false
+    },
+    "disk": {
+        "format": "󰋪 {percentage_used}%",
+        "path": "/",
+        "interval": 30,
+        "tooltip": true,
+        "tooltip-format": "{used} / {total}"
+    },
+    "temperature#gpu": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 90,
+        "format": "󰍹 {temperatureC}°C",
+        "format-critical": "󰍹 {temperatureC}°C",
+        "tooltip": false
+    },
+    "custom/volume": {
+        "exec": "~/.config/waybar/scripts/volume-bar.sh",
+        "interval": 1,
+        "on-click": "pavucontrol",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+        "tooltip": false
+    },
+    "network": {
+        "format-ethernet": "󰈀 Wired",
+        "format-wifi": "󰖩 {essid}",
+        "format-disconnected": "󰕑 Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "interval": 5
+    },
+    "clock": {
+        "format": "{:%Y.%m.%d | %I%M%p}",
+        "interval": 1,
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "custom/power": {
+        "format": "{}",
+        "exec": "printf '\\uf011'",
+        "interval": "once",
+        "tooltip": false,
+        "on-click": "~/.config/waybar/scripts/powermenu.sh"
+    }
+}
