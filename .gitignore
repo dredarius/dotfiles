@@ -1,0 +1,19 @@
+# Ignore everything by default
+*
+
+# Un-ignore .config directory itself
+!.config/
+
+# Ignore all contents inside .config
+.config/*
+
+# Un-ignore only specific .config subdirectories
+!.config/kitty/
+!.config/kitty/**
+!.config/waybar/
+!.config/waybar/**
+!.config/fastfetch/
+!.config/fastfetch/**
+
+# Don't ignore this file itself
+!.gitignore
