@@ -15,5 +15,6 @@
 !.config/fastfetch/
 !.config/fastfetch/**
 
-# Don't ignore this file itself
+# Don't ignore these files
 !.gitignore
+!README.md
