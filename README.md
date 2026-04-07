@@ -1,25 +1,21 @@
-# dotfiles
+dotfiles
 
-Configs for my Linux setup. Kitty terminal, Waybar for the top bar, Fastfetch for the terminal startup screen.
+My Linux configuration files. Managed as a bare git repo rooted at $HOME.
 
-Colors are mostly Tokyo Night (that dark blue/purple thing) except Kitty which pulls colors from my wallpaper with Matugen.
+Kitty terminal, Waybar status bar, Fastfetch startup screen. Tokyo Night
+color scheme.
 
-The black hole ASCII art in fastfetch came from some Japanese text art site years ago, not mine.
+To install:
 
-Install:
-```bash
-git clone https://github.com/dredarius/dotfiles.git /tmp/dotfiles
-cp -r /tmp/dotfiles/.config ~/.config
-```
+    git clone https://github.com/dredarius/dotfiles.git /tmp/dotfiles
+    cp -r /tmp/dotfiles/.config ~/.config
 
-Or use it as a bare repo rooted at $HOME (be careful):
-```bash
-git init ~
-git remote add origin https://github.com/dredarius/dotfiles.git
-git fetch
-git checkout master
-```
+Or manage as a bare repo:
 
-Needs: kitty, waybar, fastfetch, ttf-jetbrains-mono-nerd, ttf-ibm-plex-mono-nerd
+    git init ~
+    git remote add origin https://github.com/dredarius/dotfiles.git
+    git fetch
+    git checkout master
 
-Take what you want.
+Requires: kitty, waybar, fastfetch, ttf-jetbrains-mono-nerd,
+ttf-ibm-plex-mono-nerd
