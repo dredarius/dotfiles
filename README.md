@@ -60,6 +60,5 @@ yay -S ttf-jetbrains-mono-nerd ttf-ibm-plex-mono-nerd
 
 - The fastfetch black hole art is in `.config/fastfetch/ascii2.txt`. I didn't make it, found it on some Japanese text art site years ago.
 - The waybar volume script is at `.config/waybar/scripts/volume-bar.sh`. It reads from PipeWire and draws a little bar with Unicode block characters.
-- I use Godot, not GameMaker, but the launcher is named `launch-gamemaker.sh` from back when I was using GameMaker. Never got around to renaming it.
 
 Feel free to take whatever you want from here. Modify it, break it, make it yours.

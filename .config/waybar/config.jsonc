@@ -26,7 +26,7 @@
             "custom/signal",
             "custom/discord",
             "custom/steam",
-            "custom/gamemaker"
+            "custom/godot"
         ]
     },
     
@@ -60,7 +60,7 @@
         "on-click": "steam"
     },
     
-    "custom/gamemaker": {
+    "custom/godot": {
         "format": "[  ]",
         "tooltip": false,
         "on-click": "godot"
