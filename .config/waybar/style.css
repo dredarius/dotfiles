@@ -48,7 +48,7 @@ window#waybar.hidden {
 #custom-signal,
 #custom-discord,
 #custom-steam,
-#custom-gamemaker,
+#custom-godot,
 #custom-ws,
 #memory,
 #temperature,
@@ -94,7 +94,7 @@ window#waybar.hidden {
     border-color: #9ece6a;
 }
 
-#custom-gamemaker {
+#custom-godot {
     color: #e0af68;
     border-color: #e0af68;
 }
@@ -176,7 +176,7 @@ window#waybar.hidden {
 #custom-signal:hover,
 #custom-discord:hover,
 #custom-steam:hover,
-#custom-gamemaker:hover,
+#custom-godot:hover,
 #custom-ws:hover,
 #memory:hover,
 #temperature:hover,
